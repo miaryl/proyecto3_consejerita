@@ -1,16 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <body class="bg-gray-100 text-center p-8">
-    <h1 class="text-3xl font-bold text-blue-600">Hello Tailwind!</h1>
-    <p class="text-gray-700 mt-4">Tailwind is working 🎉</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jeju+Hallasan&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Consejitos del día</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="./src/img/logo.png" alt="Logo" />
+      <h1>Consejito del día</h1>
+      <p id="viewFavoritesBtn">Ver Favoritos</p>
+    </header>
 
+    <main>
+      <section id="consejitosSection">
+        <p id="fact">Sorpréndete</p>
+        <button id="fetchBtn" class="buttonC">Consejito</button>
+        <button id="favoriteBtn">Guardar ⭐</button>
+      </section>
+      <section id="favoritesSection" class="favoriteSection">
+        <h2>Tus consejitos favoritos</h2>
+        <div id="favoritesList"></div>
+        <button id="backBtn">⬅️ Volver</button>
+      </section>
+      <img class="logo2" src="./src/img/logo2.png" alt="happy donut">
+    </main>
+    <footer>
+      <section class="social-media">
+        <nav class="icons">
+          <img src="./src/img/ig.png" alt="Instagram" />
+          <img src="./src/img/fb.png" alt="Facebook" />
+          <img src="./src/img/mail.png" alt="Email" />
+        </nav>
+        <p> &copy; 2025 Equipo Consejistas</p>
+      </section>
+      
+    </footer>
 
+    <script src="./src/js/favourite.js"></script>
+    <script src="./src/js/api.js"></script>
     <script type="module" src="./src/js/main.js"></script>
-</body>
+  </body>
 </html>
