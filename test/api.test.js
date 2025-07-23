@@ -1,30 +1,34 @@
-import { describe, test, expect, vi, beforeAll } from 'vitest';
+import { describe, test, expect, beforeEach, vi } from 'vitest';
 
-global.fetch = vi.fn(() =>
-  Promise.resolve({
-    json: () => Promise.resolve({ text: "Mocked fact!" }),
-  })
-);
-
-beforeAll(() => {
+beforeEach(() => {
   document.body.innerHTML = `
-    <button id="fetchBtn">Fetch</button>
-    <p id="fact"></p>
+    <section id="consejitosSection">
+      <p id="fact">Sorpréndete</p>
+      <button id="fetchBtn" class="buttonC">Consejito</button>
+      <button id="favoriteBtn">Guardar ⭐</button>
+    </section>
   `;
 });
 
-import '../src/js/api';
+test('should fetch a tip and display it in #fact', async () => {
+  global.fetch = vi.fn(() =>
+    Promise.resolve({
+      json: () => Promise.resolve({ text: 'Test tip here' }),
+    })
+  );
 
-describe('Fact Fetcher', () => {
-  test('displays fetched fact on button click', async () => {
-    const button = document.getElementById('fetchBtn');
-    const factText = document.getElementById('fact');
+  
+  await import('../src/js/api');
 
-    button.click();
+  
+  const button = document.getElementById('fetchBtn');
+  button.click();
 
-    
-    await new Promise(resolve => setTimeout(resolve));
+  
+  await new Promise(resolve => setTimeout(resolve, 0));
 
-    expect(factText.textContent).toBe('Mocked fact!');
-  });
+  
+  const fact = document.getElementById('fact');
+  
+  expect(fact.textContent).toBe('Test tip here');
 });
