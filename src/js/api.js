@@ -14,7 +14,7 @@
         .then(data => {
             showFact.textContent = data.text;
 
-            btn.textContent = originalText === "Consejito" ? "Siguiente" : "Siguiente";
+            btn.textContent = originalText === "La quiero" ? "Siguiente" : "Siguiente";
             btn.disabled = false;
         })
         .catch(error => {

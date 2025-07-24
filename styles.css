@@ -19,8 +19,8 @@ header {
   top: 1rem;
   width: 250px;
   height: auto;
-  animation: caminar 3s ease-in-out infinite;
   transform-origin: center bottom;
+  animation: caminar 3s ease-in-out infinite;
 }
 
 @keyframes caminar {
@@ -50,7 +50,8 @@ header {
 }
 
 header h1 {
-  font-family: 'Jeju Hallasan', cursive;
+  font-family: 'ADLaM Display', cursive;
+;
   font-size: 3rem;
   flex: 1;
   margin: 0;
@@ -58,6 +59,7 @@ header h1 {
   z-index: 1; 
 }
 main {
+  font-family: 'Inder', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,7 +206,7 @@ main {
   word-break: break-word;
 }
 h2{
-  font-family: 'Inknut Antiqua', serif;
+  font-family: 'Inder', sans-serif;
   font-size: 2rem;
   text-align: center;
   z-index: 1; 
@@ -232,9 +234,9 @@ h2{
 }
 
 footer {
+  font-family: 'Inder', sans-serif;
   background: linear-gradient(135deg, #FED2E2, #E9A5F1, #C68EFD, #8f87f1);
   padding: 2rem;
-  font-family: 'Arial', sans-serif;
   color: #020101;
   position: fixed;
   bottom: 0;

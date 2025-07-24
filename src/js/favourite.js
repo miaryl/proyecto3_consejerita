@@ -15,7 +15,7 @@
   function saveToFavorites() {
     const fact = showFact.textContent;
 
-    if (fact && fact !== "sorry there is some error..." && fact !== "Sorpréndete") {
+    if (fact && fact !== "sorry there is some error..." && fact !== "Descubre tu dosis de alegría") {
       const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
       if (!favorites.includes(fact)) {
